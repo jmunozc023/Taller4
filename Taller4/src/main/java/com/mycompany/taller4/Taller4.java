@@ -3,10 +3,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 public class Taller4 extends JFrame implements ActionListener{
-    private JTextField textfield1; 
-    private JTextArea textfield2;
-    private JLabel label1;
-    private JButton boton1;
+    final JTextField textfield1; 
+    final JTextArea textfield2;
+    final JLabel label1;
+    final JButton boton1;
     int contador=0;
     int aleatorio=0;
     
@@ -29,6 +29,7 @@ public class Taller4 extends JFrame implements ActionListener{
         boton1.addActionListener(this);
         
     }
+    @Override
     public void actionPerformed(ActionEvent e) {
         try {
             int numero=Integer.parseInt(textfield1.getText());
@@ -40,7 +41,6 @@ public class Taller4 extends JFrame implements ActionListener{
             } else {
                 textfield2.append(numero+" El número es mayor.\n");
             }
-            
             contador++;
         }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null, ex.getMessage());
