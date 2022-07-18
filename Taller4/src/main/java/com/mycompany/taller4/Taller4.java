@@ -24,6 +24,9 @@ public class Taller4 extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==boton1){
             String numero=textfield1.getText();
+            int x1=Integer.parseInt(numero);
+            String resultado=String.valueOf(x1);
+            System.out.print(x1);
         }
     }
     public static void main(String[] args) {
