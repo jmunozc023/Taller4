@@ -1,11 +1,19 @@
 package com.mycompany.taller4;
 import javax.swing.*;
+import java.util.Random;
 import java.awt.*;
 import java.awt.event.*;
 public class Taller4 extends JFrame implements ActionListener{
     private JTextField textfield1;
     private JLabel label1;
     private JButton boton1;
+    int contador=0;
+    int min=0;
+        int max=25;
+        
+        Random random=new Random();
+        
+        int value=random.nextInt(max+min)+min;
     Taller4(){
         setLayout(null);
         label1= new JLabel("Adivina el numero", SwingConstants.CENTER);
@@ -26,10 +34,14 @@ public class Taller4 extends JFrame implements ActionListener{
             String numero=textfield1.getText();
             int x1=Integer.parseInt(numero);
             String resultado=String.valueOf(x1);
-            System.out.print(x1);
-        }
+            }
     }
+    public void seleccion(){
+        
+    }
+    
     public static void main(String[] args) {
+        
         Taller4 juego=new Taller4();
         juego.setBounds(171,134,1024,500);
         juego.setResizable(false);
