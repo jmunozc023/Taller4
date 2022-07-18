@@ -5,8 +5,9 @@ public class Taller4 extends JFrame{
     private JLabel label1;
     Taller4(){
         setLayout(null);
-        label1= new JLabel("Adivina el numero");
-        label1.setBounds(10,20,300,30);
+        label1= new JLabel("Adivina el numero", SwingConstants.CENTER);
+        label1.setFont(new Font("Serif",Font.BOLD,50));
+        label1.setBounds(5,30,1000,100);
         add(label1);
     }
     
